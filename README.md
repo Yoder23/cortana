@@ -1,6 +1,6 @@
 # Cortana
 
-**Formally verified AI companion with hard-constraint safety.**
+**A formally checked safety-gating prototype for companion-style agents, with universe-separated memory and hard action constraints.**
 
 [![Tests](https://img.shields.io/badge/tests-201%20passed-brightgreen)]()
 [![Verify](https://img.shields.io/badge/verify-42%2F42-brightgreen)]()
@@ -9,7 +9,7 @@
 
 ---
 
-Cortana is a production-grade cognitive architecture that enforces safety through **code**, not prompting.  
+Cortana is a safety-gating prototype that enforces hard constraints through **code**, not prompting.  
 No model weights involved. No API key required to run the proof.
 
 ```
@@ -26,7 +26,7 @@ python verify_cortana.py
 
 Cortana's safety is not "try not to do bad things." It is architectural:
 
-> **Forbidden actions cannot execute. Simulations cannot contaminate facts. Hallucinations cannot pass silently. These are code paths that do not exist.**
+> **Forbidden actions cannot execute. Simulations cannot contaminate facts. High-confidence uncited claims are flagged before entering memory. These are code paths, not policies.**
 
 | Guarantee | How it's enforced | Block rate |
 |---|---|---|
@@ -210,7 +210,7 @@ Runs 42 checks — no API key, no GPU, no internet. Proves:
 6. Deception risk gating  
 7. **SIMULATION → FACT architecturally impossible**  
 8. Hypothesis without evidence fails verification  
-9. High-confidence claim without evidence detected as hallucination  
+9. High-confidence claim without evidence flagged as hallucination risk  
 10. Red-line invariants defined (no deception, no permission escalation, corrigibility)  
 
 ---
@@ -288,7 +288,7 @@ See [CLAIMS.md](CLAIMS.md) for a rigorous, falsifiable list of what Cortana guar
 ## Related
 
 - **[MoA](https://github.com/Yoder23/moa)** — The mixture-of-agents framework that provides the action IR and safety gate primitives Cortana is built on.
-- **[CorticalSwarm](https://github.com/Yoder23/cortical-swarm)** — Infinite-context extension using overlapping BrainStem windows, built to pair with Cortana.
+- **[CorticalSwarm](https://github.com/Yoder23/cortical-swarm)** — Windowed long-context continuity protocol with hash-validated handoffs, built to pair with Cortana.
 
 ---
 
