@@ -177,7 +177,7 @@ pytest tests/ -v
 ```
 
 ```
-150 passed in 1.81s
+201 passed in 2.14s
 ```
 
 **Coverage:**
@@ -185,11 +185,11 @@ pytest tests/ -v
 | File | Tests | Coverage |
 |---|---|---|
 | `test_ir.py` | 32 | IR types, factories, promotion rules |
-| `test_gatekeeper.py` | 29 | Hard constraints, adversarial inputs |
-| `test_verifier.py` | 28 | Universe separation, hallucination |
-| `test_memory.py` | 28 | Append-only log, fact graph, retrieval |
+| `test_gatekeeper.py` | 34 | Hard constraints, adversarial inputs |
+| `test_verifier.py` | 23 | Universe separation, hallucination |
+| `test_memory.py` | 21 | Append-only log, fact graph, retrieval |
 | `test_values.py` | 17 | Red-line tests, value profiles |
-| `test_pipeline.py` | 36 | End-to-end integration |
+| `test_pipeline.py` | 23 | End-to-end integration |
 | **`test_safety_proof.py`** | **51** | **Value proofs: why Cortana vs. nothing** |
 
 ---
